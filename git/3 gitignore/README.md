@@ -29,6 +29,7 @@ https://github.com/username/jusan-git/tree/5a1e0d9c4c864e13f0682bec96a9f19786fad
 ---
 
 ### Ответ
+https://github.com/d1maash/jusan-git/tree/989e54fe36eeaa0b14658dfc9411279dbfaaeb0e
 
 В репозитории не должно быть папки `temp`. Файл `.gitignore`:
 
