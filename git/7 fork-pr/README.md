@@ -26,6 +26,8 @@ fork - это клонирование чужого репозитория на 
 ---
 
 ### Ответ
+ 
+https://github.com/jusan-singularity/fork-me/pull/110
 
 Дополненный скрипт:
 

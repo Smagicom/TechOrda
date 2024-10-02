@@ -89,3 +89,8 @@ int main() {
 | WhatsApp  | [Ссылка](whats.app) | 30 минут  |
 | Telegram  | [Ссылка](tg.me)     | 5 минут   |
 ````
+
+
+
+# Ответ от меня 
+ - https://github.com/Hellowich/jusan-git/commit/fd4fc0d66a5811ea54534bca8b1e76178babe57a

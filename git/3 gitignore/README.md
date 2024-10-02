@@ -35,3 +35,5 @@ https://github.com/username/jusan-git/tree/5a1e0d9c4c864e13f0682bec96a9f19786fad
 ```
 temp
 ```
+# Ответ
+- https://github.com/Hellowich/jusan-git/commit/df601a7d92bd316ac53267ced5d3a6123de8ff71
