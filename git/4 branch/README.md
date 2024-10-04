@@ -46,3 +46,5 @@ git checkout authorization
 
 5. Загрузите изменения `git push`
 6. Прислать ссылку на репозиторий c указанием последнего коммита мастера в URL.
+
+https://github.com/kashkenovbagdat/TechOrda/commit/f5a788d43be96daf333ef60da96d32c5922c2d13
