@@ -45,3 +45,6 @@ P.S.
 - Красивый вывод логов `git log --all --decorate --oneline --graph`
 
 [Рецензия](./REVIEW.md)
+
+
+https://github.com/kashkenovbagdat/TechOrda/commit/da531b2ff2e0a83555ede8c240f32aa9baad9826
