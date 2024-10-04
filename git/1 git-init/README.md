@@ -47,4 +47,5 @@ P.S.
 [Рецензия](./REVIEW.md)
 
 
-https://github.com/kashkenovbagdat/TechOrda/commit/da531b2ff2e0a83555ede8c240f32aa9baad9826
+
+https://github.com/kashkenovbagdat/TechOrda/commit/ef6056e813d949bd6eced806a95030995649b4e2
