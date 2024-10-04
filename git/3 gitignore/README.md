@@ -35,3 +35,4 @@ https://github.com/username/jusan-git/tree/5a1e0d9c4c864e13f0682bec96a9f19786fad
 ```
 temp
 ```
+https://github.com/kashkenovbagdat/TechOrda/commit/e455e64ba4e1c7b267360c306d4040593d063c24
