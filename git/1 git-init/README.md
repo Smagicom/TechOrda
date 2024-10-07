@@ -48,4 +48,5 @@ P.S.
 
 
 
-https://github.com/kashkenovbagdat/TechOrda/commit/ef6056e813d949bd6eced806a95030995649b4e2
+
+https://github.com/kashkenovbagdat/jusan-git/commit/ddbbe79ea4cbcc441e732d66c1237a5ba1000fc0
