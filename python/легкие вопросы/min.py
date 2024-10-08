@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def min_num(nums):
-    if 0 <= len(nums) <= 5:
+    if 0 <= len(nums) <= 10000:
         if not nums:  
             print("The list is empty!")
             return None
