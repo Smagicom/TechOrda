@@ -3,8 +3,8 @@
 def perfectnum(n):
     n = int(n)
     sum = 0
-    if n <= 0:
-        return "The number must be greater than 0!"
+    if n <= 0 or n > 1000:
+        return "The number out of range!"
     for i in range(1, n):
         if n % i == 0:
             sum += i
