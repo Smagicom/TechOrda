@@ -26,7 +26,7 @@ def checkdate(d, m, y):
     if m == 4 or m == 6 or m == 9 or m == 11:
         return d <= 30
     return True
-d, m, y = input("Please enter date in format dd.mm.yyyy: ").split(".")
-print(checkdate(d, m, y))
-    
+# d, m, y = input("Please enter date in format dd.mm.yyyy: ").split(".")
+# print(checkdate(d, m, y))
+# Please Uncomment if you want to check this function!
     
