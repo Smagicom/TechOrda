@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from correctdate import checkdate
 
-def CheckSeazon(d, m, y):
+def CheckSeason(d, m, y):
     y = int(y)
     m = int(m)
     d = int(d)
@@ -22,4 +22,4 @@ def CheckSeazon(d, m, y):
           print("Invalid date!")
 
 d, m, y = input("Please enter date in format dd.mm.yyyy: ").split(".")
-CheckSeazon(d, m, y)
+CheckSeason(d, m, y)
