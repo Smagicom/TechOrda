@@ -1,0 +1,1 @@
+https://github.com/khalykbaiakaris/jusan-git/tree/06ef4226f63b5bba8290e04e6ab897d203f28187
