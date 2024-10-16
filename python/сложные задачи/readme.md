@@ -9,6 +9,13 @@ Sample Input:
 Sample Output:
 15
 
+#ответ
+def sum_1_n(n):
+    return n * (n + 1) // 2
+
+# Пример использования
+n = 5
+print(sum_1_n(n))  # Выведет 15
 
 
 
@@ -34,6 +41,18 @@ Sample Input:
 Sample Output:
 1
 
+#ответ
+
+def count_leap_year(n):
+    count_div4 = (n - 1) // 4
+    count_div100 = (n - 1) // 100
+    count_div400 = (n - 1) // 400
+    return count_div4 - count_div100 + count_div400
+
+# Пример использования
+n = 100
+print(count_leap_year(n))  # Выведет 24
+
 
 ##swap-bits 
 Реализуйте метод, который меняет местами первые 4 бита с остальными 4 и возвращает результат.
@@ -46,6 +65,22 @@ Sample Input:
 15
 Sample Output:
 240
+
+#ответ
+def swap_bits(a):
+    # Извлечение старших 4 битов
+    upper_bits = (a >> 4) & 0b1111
+    # Извлечение младших 4 битов
+    lower_bits = a & 0b1111
+    # Поменять местами и объединить
+    result = (lower_bits << 4) | upper_bits
+    return result
+
+# Пример использования
+a = 15
+print(swap_bits(a))  # Выведет 240
+
+
 
 
 
@@ -79,6 +114,24 @@ Sample Input:
 Sample Output:
 2
 
+#ответ
+def sort_nums_three(a, b, c):
+    # Сначала проверим, если a больше b, поменяем их местами
+    if a > b:
+        a, b = b, a
+    # Теперь если b больше c, поменяем их местами
+    if b > c:
+        b, c = c, b
+    # Повторно проверим a и b, потому что a могло быть больше c
+    if a > b:
+        a, b = b, a
+    print(a, b, c)
+
+# Пример использования
+a, b, c = 3, 2, 1
+sort_nums_three(a, b, c)  # Выведет 1 2 3
+
+
 
 
 
@@ -92,6 +145,21 @@ Sample Input:
 [1, 3, 9, 1, 5, 7]
 Sample Output:
 [7, 9]
+
+#ответ
+def miss_you(array1, array2):
+    # Преобразуем первый массив в множество для быстрого поиска
+    set1 = set(array1)
+    
+    # Находим элементы второго массива, которые не входят в первый массив
+    result = sorted(set(x for x in array2 if x not in set1))
+    
+    return result
+
+# Пример использования
+array1 = [1, 1, 3, 2, 5]
+array2 = [1, 3, 9, 1, 5, 7]
+print(miss_you(array1, array2))  # Выведет [7, 9]
 
 
 
@@ -110,6 +178,34 @@ Sample Input:
 [1, 2, 9, 8, 5, 7]
 Sample Output:
 true
+
+#ответ
+
+def perfectly_balanced(array):
+    # Считаем полную сумму всех элементов
+    total_sum = sum(array)
+    
+    # Инициализируем сумму элементов слева
+    left_sum = 0
+    
+    # Проходим по каждому элементу массива
+    for i in range(len(array)):
+        # Вычитаем текущий элемент из правой суммы
+        right_sum = total_sum - left_sum - array[i]
+        
+        # Проверяем, равны ли суммы слева и справа
+        if left_sum == right_sum:
+            return True
+        
+        # Добавляем текущий элемент к левой сумме
+        left_sum += array[i]
+    
+    # Если мы прошли по всему массиву и не нашли, возвращаем False
+    return False
+
+# Пример использования
+array = [1, 2, 9, 8, 5, 7]
+print(perfectly_balanced(array))  # Выведет True
 
 
 
@@ -132,6 +228,27 @@ Sample Input:
 Sample Output:
 0 1
 
+#ответ
+def stock_buy(m, s):
+    # Создаем словарь для хранения индексов
+    seen = {}
+    
+    # Проходим по массиву
+    for i, price in enumerate(s):
+        # Вычисляем необходимую пару для текущего элемента
+        complement = m - price
+        
+        # Если пара найдена в словаре, возвращаем индексы
+        if complement in seen:
+            return sorted([seen[complement], i])
+        
+        # Иначе сохраняем текущую цену и ее индекс в словарь
+        seen[price] = i
+
+# Пример использования
+m = 8
+s = [8, 7, 3, 1, 3, 10]
+print(stock_buy(m, s))  # Выведет [1, 3]
 
 
 
@@ -193,4 +310,24 @@ Sample Output:
 Диск 1 с башни 2 переложить в башню 1
 Диск 2 с башни 2 переложить в башню 3
 Диск 1 с башни 1 переложить в башню 3
+
+#ответ
+def hanoiTower(n, from_tower=1, to_tower=3, aux_tower=2):
+    # Базовый случай: если один диск, перемещаем его напрямую
+    if n == 1:
+        print(f"Диск {n} с башни {from_tower} переложить в башню {to_tower}")
+        return
+    
+    # Шаг 1: Переместить n-1 дисков с from_tower на вспомогательную башню
+    hanoiTower(n - 1, from_tower, aux_tower, to_tower)
+    
+    # Шаг 2: Переместить самый большой диск с from_tower на to_tower
+    print(f"Диск {n} с башни {from_tower} переложить в башню {to_tower}")
+    
+    # Шаг 3: Переместить n-1 дисков с вспомогательной башни на to_tower
+    hanoiTower(n - 1, aux_tower, to_tower, from_tower)
+
+# Пример использования
+n = 5
+hanoiTower(n)
 
