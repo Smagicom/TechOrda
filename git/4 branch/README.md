@@ -46,3 +46,5 @@ git checkout authorization
 
 5. Загрузите изменения `git push`
 6. Прислать ссылку на репозиторий c указанием последнего коммита мастера в URL.
+
+https://github.com/serikbeissov/jusan-git/commit/e914a939432fb500ba96b3ab9a7fe6d878eadb5b
