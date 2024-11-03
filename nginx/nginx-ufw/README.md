@@ -20,3 +20,23 @@
 ---
 
 ### Ответ
+sudo apt update 
+sudo apt install ufw
+sudo ufw disable 
+sudo ufw allow ssh
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+sudo ufw status verbose
+
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                  
+80,443/tcp (Nginx Full)    ALLOW IN    Anywhere                  
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+80,443/tcp (Nginx Full (v6)) ALLOW IN    Anywhere (v6)    
+

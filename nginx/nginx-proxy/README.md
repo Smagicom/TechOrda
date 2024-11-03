@@ -35,3 +35,16 @@ web-server: 0
 ---
 
 ### Ответ
+
+server {
+    listen 8080;
+    server_name example.com;
+   
+    location /api/ {
+        proxy_pass http://localhost:9090;
+    }
+}        
+
+curl http://localhost:8080/api/
+404 page not found
+
