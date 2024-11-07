@@ -1,0 +1,5 @@
+FROM nginx:mainline
+WORKDIR /var/www/jusan-dockerfile
+COPY index.html .
+COPY jusan-dockerfile.conf /etc/nginx/conf.d/default.conf
+
