@@ -57,3 +57,58 @@ docker-compose logs api
 ---
 
 ### Ответ
+```bash
+mkdir -p jusan-docker/docker-compose-final
+cd jusan-docker/docker-compose-final
+
+curl -o jusan-docker-mount.conf https://stepik.org/media/attachments/lesson/686238/jusan-docker-mount.conf
+curl -o jusan-docker-mount.zip https://stepik.org/media/attachments/lesson/686238/jusan-docker-mount.zip
+unzip jusan-docker-mount.zip -d jusan-docker-mount
+```
+
+```yaml
+version: "3.8"
+
+services:
+  api:
+    image: jusan-fastapi-final:dockerized
+    container_name: jusan-compose-final
+    restart: always
+
+  nginx:
+    image: nginx:mainline
+    container_name: jusan-nginx-final
+    ports:
+      - "8787:80"
+    depends_on:
+      - api
+    volumes:
+      - ./jusan-docker-mount.conf:/etc/nginx/nginx.conf
+      - ./jusan-docker-mount:/etc/nginx/mount
+      - ./jusan-fastapi-final.conf:/etc/nginx/conf.d/jusan-fastapi-final.conf
+    restart: always
+```
+
+```nginx
+server {
+    listen 80;
+    server_name jusan.docker-compose;
+
+    location / {
+        proxy_pass http://jusan-compose-final:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+```bash
+docker-compose up -d
+
+docker-compose ps
+
+docker-compose logs nginx
+docker-compose logs api
+```
