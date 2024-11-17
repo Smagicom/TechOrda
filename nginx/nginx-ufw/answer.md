@@ -1,12 +1,13 @@
-<code> root@user-asus:/etc/nginx# ufw allow 80/tcp
+<code> 
+root@user-asus:/etc/nginx# ufw allow 80/tcp
 Skipping adding existing rule
 Skipping adding existing rule (v6)
 root@user-asus:/etc/nginx# ufw allow 443/tcp
 Skipping adding existing rule
 Skipping adding existing rule (v6)
 root@user-asus:/etc/nginx# ufw status
-Status: active
-
+Status: active </code>
+<code>
 To                         Action      From
 --                         ------      ----
 22                         ALLOW       Anywhere                  
@@ -19,7 +20,7 @@ To                         Action      From
 2222/tcp (v6)              ALLOW       Anywhere (v6)             
 80/tcp (v6)                ALLOW       Anywhere (v6)             
 443/tcp (v6)               ALLOW       Anywhere (v6)  
-
 </code>
+
 
 
