@@ -1,3 +1,4 @@
+root@user-asus:/etc/nginx# cat ./sites-available/default
 server {
     listen 8080;
     server_name example.com;
@@ -51,3 +52,21 @@ server {
         deny all;
     }
 }
+root@user-asus:/etc/nginx# nano ./sites-available/default
+root@user-asus:/etc/nginx# nginx -t
+nginx: [warn] conflicting server name "example.com" on 0.0.0.0:8080, ignored
+nginx: [warn] conflicting server name "jusan.kz" on 0.0.0.0:443, ignored
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+root@user-asus:/etc/nginx# systemctl restart nginx
+root@user-asus:/etc/nginx# curl --user marketing:marketingP@ssword http://localhost:8080/gifs/
+<html>
+<head><title>Index of /gifs/</title></head>
+<body>
+<h1>Index of /gifs/</h1><hr><pre><a href="../">../</a>
+<a href="__MACOSX/">__MACOSX/</a>                                          27-Oct-2024 14:06                   -
+<a href="dancing.gif">dancing.gif</a>                                        25-Mar-2022 11:20              253794
+<a href="jam.gif">jam.gif</a>                                            25-Mar-2022 11:20              471720
+<a href="sad.gif">sad.gif</a>                                            25-Mar-2022 11:21             3605836
+</pre><hr></body>
+</html>
