@@ -46,3 +46,9 @@ git checkout authorization
 
 5. Загрузите изменения `git push`
 6. Прислать ссылку на репозиторий c указанием последнего коммита мастера в URL.
+
+
+# Ответ
+
+feature/username branch: https://github.com/d1maash/jusan-git/tree/79a831e2e24a7637000218a791a2c3ce6b76271d
+new-readme branch: https://github.com/d1maash/jusan-git/tree/ce3283f436b194308b2b3b0d318d7f34c1d9ae61

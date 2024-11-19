@@ -1,0 +1,132 @@
+{
+	"id": "90c5049b-c836-4b15-b4bc-9104b7fced82",
+	"name": "New Collection",
+	"timestamp": "2024-10-21T20:14:12.211Z",
+	"collection_id": "27513111-0d5e06f2-63e8-4bef-af6f-21248a3bb0c3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-10-21T20:14:11.937Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b63e599c-b138-4a13-ae96-e6f58432cd18",
+			"name": "http://127.0.0.1:8000/sum1n/{n}",
+			"url": "http://127.0.0.1:8000/fibo",
+			"time": 15,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2d823574-f326-4f1a-a3f0-f687f79b8b0b",
+			"name": "http://127.0.0.1:8000/fibo",
+			"url": "http://127.0.0.1:8000/fibo?n=5",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fe05adb6-e675-4b9a-ab30-700b127d43e4",
+			"name": "http://127.0.0.1:8000/reverse",
+			"url": "http://127.0.0.1:8000/reverse",
+			"time": 3,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cca939c4-5741-49dc-afc6-7335288dc1e2",
+			"name": "http://127.0.0.1:8000/list",
+			"url": "http://127.0.0.1:8000/list",
+			"time": 2,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "07797a33-9e30-47fb-97fb-08f182474a06",
+			"name": "http://127.0.0.1:8000/calculator",
+			"url": "http://127.0.0.1:8000/calculator",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 29,
+	"collection": {
+		"requests": [
+			{
+				"id": "b63e599c-b138-4a13-ae96-e6f58432cd18",
+				"method": "GET"
+			},
+			{
+				"id": "2d823574-f326-4f1a-a3f0-f687f79b8b0b",
+				"method": "GET"
+			},
+			{
+				"id": "fe05adb6-e675-4b9a-ab30-700b127d43e4",
+				"method": "POST"
+			},
+			{
+				"id": "cca939c4-5741-49dc-afc6-7335288dc1e2",
+				"method": "POST"
+			},
+			{
+				"id": "07797a33-9e30-47fb-97fb-08f182474a06",
+				"method": "POST"
+			}
+		]
+	}
+}

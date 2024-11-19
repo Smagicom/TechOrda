@@ -42,3 +42,21 @@ bash ./tester.sh
 ---
 
 ### Ответ
+
+# docker-bind solution
+
+```bash
+curl -o nginx.conf https://docs.example.com/path/to/nginx.conf
+
+docker run -d \
+  --name jusan-docker-bind \
+  -p 7777:80 \
+  -v "$(pwd)/nginx.conf:/etc/nginx/nginx.conf" \
+  nginx:mainline
+
+curl http://localhost:7777
+
+docker ps
+
+docker logs jusan-docker-bind
+```

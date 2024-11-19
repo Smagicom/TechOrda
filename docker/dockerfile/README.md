@@ -57,3 +57,18 @@ bash ./tester.sh
 ---
 
 ### Ответ
+
+```bash
+curl -o jusan-dockerfile.conf https://stepik.org/media/attachments/lesson/686238/jusan-dockerfile.conf
+
+curl -o jusan-dockerfile.zip https://stepik.org/media/attachments/lesson/686238/jusan-dockerfile.zip
+
+unzip jusan-dockerfile.zip -d jusan-dockerfile
+
+echo -e "FROM nginx:mainline\nCOPY jusan-dockerfile.conf /etc/nginx/conf.d/jusan-dockerfile.conf\nCOPY jusan-dockerfile /usr/share/nginx/html" > Dockerfile
+
+docker build -t jusan-dockerfile .
+
+docker images
+
+docker run -d --name jusan-dockerfile -p 6060:80 jusan-dockerfile
