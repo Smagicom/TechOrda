@@ -128,7 +128,7 @@ app2 ansible_host=127.0.0.1 ansible_port=24 ansible_user=root
    chmod 755 api
 ```
 
-- Из задания [service-api](https://stepik.org/lesson/679792/step/5?unit=678429) можете
+- Из задания [service-api](https://github.com/jusan-singularity/track-devops-systemd-api/releases/download/v0.1/api) можете
   взять конф.файл `api.service`, который запускает скачанный бинарник как сервис. Сохраните
   этот файл в `files`. Этот файл нужно перенести на сервер (определите куда надо).
 - Запустить `api.service` как сервис.
