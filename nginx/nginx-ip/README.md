@@ -22,3 +22,40 @@
 ---
 
 ### Ответ
+
+  GNU nano 7.2                                                                hwnginx.conf *                                                                       
+server {
+    listen 8080;
+    server_name example.com;
+    location / {
+        auth_basic "private site";
+        auth_basic_user_file /etc/nginx/conf.d/passwd;
+        root /var/www/example.com;
+        index index.html;
+    }
+    location /images {
+        auth_basic "design site";
+        auth_basic_user_file /etc/nginx/conf.d/design_passwd;
+        root /var/www/example.com/cats/;
+    }
+    location /gifs {
+        auth_basic "marketing site";
+        auth_basic_user_file /etc/nginx/conf.d/marketing_passwd;
+        root /var/www/example.com/gifs/;
+    }
+
+    location /secret_word {
+        allow 192.0.0.1/20;       
+        deny 192.0.0.1;           
+        deny all;                
+        return 203 'jusan-nginx-ip'; 
+    }
+
+    location /api/ {
+        proxy_pass http://localhost:9090;
+    }
+}
+
+curl http://localhost:8080/secret_word
+jusan-nginx-ip
+

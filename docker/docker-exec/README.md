@@ -57,3 +57,29 @@ bash ./tester.sh
 ---
 
 ### Ответ
+
+ 1904  sudo docker run -d --name jusan-docker-exec -p 8181:80 nginx:mainline
+ 1905  sudo docker exec -it jusan-docker-exec bash
+ 1906  curl http://localhost:8181
+ 1907  curl http://localhost:8181/home
+ 1908  curl http://localhost:8181/about
+ 1909  sudo docker logs jusan-docker-exec
+
+    1  cd /etc/nginx/conf.d/
+    2  ls
+    3  nano jusan-docker-exec.conf
+    4  cat << EOF > /etc/nginx/conf.d/jusan-docker-exec.conf
+server {
+    listen 80;
+    server_name jusan.singularity;
+
+    location / {return 200 'Hello, from jusan-docker-exec';}
+    location /home {return 201 'This is my home!';}
+    location /about {return 202 'I am just an exercise!';}
+}
+EOF
+
+    5  cat jusan-docker-exec.conf
+    6  rm default.conf 
+    7  nginx -s reload
+

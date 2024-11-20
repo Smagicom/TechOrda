@@ -35,3 +35,5 @@ https://github.com/username/jusan-git/tree/5a1e0d9c4c864e13f0682bec96a9f19786fad
 ```
 temp
 ```
+
+https://github.com/serikbeissov/jusan-git/commit/e914a939432fb500ba96b3ab9a7fe6d878eadb5b

@@ -10,3 +10,34 @@
 6. Учетка `design` не должна иметь доступ на другие пути, тоже самое касается других учеток.
 
 ---
+
+  GNU nano 7.2                                                                hwnginx.conf                                                                         
+server {
+    listen 8080;
+    server_name example.com;
+    location / {
+        auth_basic "private site";
+        auth_basic_user_file /etc/nginx/conf.d/passwd;
+        root /var/www/example.com;
+        index index.html;
+    }
+    location /images {
+        auth_basic "design site";
+        auth_basic_user_file /etc/nginx/conf.d/design_passwd;
+        root /var/www/example.com/cats/;
+    }
+    location /gifs {
+        auth_basic "marketing site";
+        auth_basic_user_file /etc/nginx/conf.d/marketing_passwd;
+        root /var/www/example.com/gifs/;
+    }
+    location /secret_word {
+        return 201 'jusan-nginx-locations';
+    }
+
+    location /api/ {
+        proxy_pass http://localhost:9090;
+    }
+}
+
+
