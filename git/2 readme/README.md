@@ -89,3 +89,4 @@ int main() {
 | WhatsApp  | [Ссылка](whats.app) | 30 минут  |
 | Telegram  | [Ссылка](tg.me)     | 5 минут   |
 ````
+https://github.com/kashkenovbagdat/TechOrda/commit/be77ee1c3ccbfc081e499013c29d60e86d3555be

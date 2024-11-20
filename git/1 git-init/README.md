@@ -45,3 +45,8 @@ P.S.
 - Красивый вывод логов `git log --all --decorate --oneline --graph`
 
 [Рецензия](./REVIEW.md)
+
+
+
+
+https://github.com/kashkenovbagdat/jusan-git/commit/ddbbe79ea4cbcc441e732d66c1237a5ba1000fc0
