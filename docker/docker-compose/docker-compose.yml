@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  api:
+    image: jusan-fastapi-final:dockerized
+    container_name: jusan-compose
+    ports:
+      - "8282:8080"
+    restart: always

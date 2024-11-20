@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  api:
+    image: jusan-fastapi-final:dockerized          
+    container_name: jusan-compose-final            
+    restart: always                               
+
+  nginx:
+    image: nginx:mainline                         
+    container_name: jusan-nginx-final             
+    restart: always                               
+    depends_on:
+      - api                                       
+    ports:
+      - "8787:80"                                 
+    volumes:
+      - ./jusan-docker-mount.conf:/etc/nginx/conf.d/jusan-docker-mount.conf  # Монтирование конфигурации
+      - ./jusan-docker-mount.zip:/usr/share/nginx/html/jusan-docker-mount.zip  # Монтирование распакованного архива
+      - ./jusan-fastapi-final.conf:/etc/nginx/conf.d/jusan-fastapi-final.conf # Конфигурация для перенаправления запросов
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
