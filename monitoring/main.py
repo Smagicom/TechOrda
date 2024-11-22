@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Response, status
+from main import FastAPI, Response, status
 from prometheus_client import Counter, Histogram, Gauge, generate_latest, REGISTRY
 from prometheus_client.exposition import basic_auth_handler
 import time
