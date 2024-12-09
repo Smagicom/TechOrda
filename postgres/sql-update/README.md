@@ -18,3 +18,8 @@
 ---
 
 ### Ответ
+```SQL
+INSERT INTO users (name, age, country, department)
+VALUES ('azatmukanov', 40, 'GER', 'operations');
+
+```

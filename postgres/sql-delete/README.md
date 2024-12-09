@@ -16,3 +16,8 @@
 ---
 
 ### Ответ
+```SQL
+DELETE FROM users
+WHERE name = 'serikbolat';
+
+```

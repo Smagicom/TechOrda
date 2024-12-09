@@ -7,3 +7,6 @@
 ---
 
 ### Ответ
+```SQL
+SELECT login FROM  public.student;
+```

@@ -22,3 +22,24 @@ PostgreSQL, как и nginx, имеет основной файл конфигу
 ---
 
 ### Ответ
+# DB Version: 17
+# OS Type: linux
+# DB Type: web
+# Total Memory (RAM): 512 MB
+# CPUs num: 2
+# Connections num: 20
+# Data Storage: ssd
+
+max_connections = 20
+shared_buffers = 128MB
+effective_cache_size = 384MB
+maintenance_work_mem = 32MB
+checkpoint_completion_target = 0.9
+wal_buffers = 3932kB
+default_statistics_target = 100
+random_page_cost = 1.1
+effective_io_concurrency = 200
+work_mem = 3276kB
+huge_pages = off
+min_wal_size = 1GB
+max_wal_size = 4GB

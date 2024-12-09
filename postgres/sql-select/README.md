@@ -30,3 +30,10 @@ SQL запросы могут быть как простыми, так и сло
 ---
 
 ### Ответ
+
+```SQL
+SELECT name, age, department
+FROM users
+WHERE age < 30;
+
+```

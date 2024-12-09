@@ -194,4 +194,27 @@ host deadline +testers all scram-sha-256
 ---
 
 ### Ответ
+```SQL
+CREATE ROLE administrator WITH NOLOGIN;
+CREATE ROLE student WITH NOLOGIN;
 
+CREATE ROLE arman WITH LOGIN PASSWORD 'M96pgz3h' IN ROLE administrator;
+CREATE ROLE dias WITH LOGIN PASSWORD 'sxr9hN5h' IN ROLE administrator;
+
+CREATE ROLE artem WITH LOGIN PASSWORD 'UD4z3Evu' IN ROLE student;
+CREATE ROLE lyazzat WITH LOGIN PASSWORD 'PG9ku65k' IN ROLE student;
+
+CREATE ROLE askhat WITH LOGIN PASSWORD '9a5fZzzj' IN ROLE administrator, student;
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO administrator;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO student;
+```
+
+```bash
+host    deadline    +administrator    127.0.0.1/24    md5
+host    deadline    +student    127.0.0.1/24    scram-sha-256
+host    all    askhat    0.0.0.0/0    reject
+host    all    postgres    0.0.0.0/0    md5
+sudo -iu postgres psql -U postgres -c "SELECT pg_reload_conf();"
+
+```

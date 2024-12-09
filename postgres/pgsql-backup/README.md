@@ -84,3 +84,10 @@ psql -U postgres deadline_test < ./backup_deadline.sql
 ---
 
 ### Ответ
+
+```BASH
+pg_dump -U postgres -f /home/box/backup_deadline.sql deadline
+psql -U postgres -c "CREATE DATABASE deadline_test;"
+psql -U postgres deadline_test < /home/box/backup_deadline.sql
+
+```
