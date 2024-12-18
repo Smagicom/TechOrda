@@ -54,4 +54,15 @@ bash ./tester.sh
 ---
 
 ### Ответ
+sudo docker run -d --name jsn-dkr-run -p 8887:80 nginx:mainline
+8e2cfdffa414de0acda7dc746ca3a0c1656c7d130269853e932a324f8a4348e9
+
+ sudo docker ps
+8e2cfdffa414   nginx:mainline              "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes    0.0.0.0:8887->80/tcp, [::]:8887->80/tcp
+
+sudo docker stop jsn-dkr-run
+
+sudo docker ps -a
+
+
 

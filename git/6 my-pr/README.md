@@ -12,3 +12,5 @@ Pull request позволяют вам сообщать другим об изм
 1. В репозитории `jusan-git` создать "Pull request" из ветки `new-readme` в `master`.
 2. Посмотрите на странице пулл-реквеста, как отображаются окна: Conversation, Commits, Checks, Files changed.
 3. Прислать ссылку на pull-request.
+
+https://github.com/serikbeissov/jusan-git/pull/1
